@@ -4,11 +4,6 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -16,8 +11,26 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
+/*--------------------------------------------------------------
+    User Routes
+--------------------------------------------------------------*/
 Route::prefix('user')->group(function() {
-    Route::get('/profile', 'UserController@showProfile')->name('profile');
-    Route::get('/gopro', 'UserController@goPro')->name('gopro');
-    Route::get('/gofree', 'UserController@goFree')->name('gofree');
+    /*--------------------------------------------------------------
+        User profile
+    --------------------------------------------------------------*/
+    Route::get('/profile', 'UserController@showProfile')->name('profile'); //Works
+    Route::get('/gopro', 'UserController@goPro')->name('gopro'); //Works
+    Route::get('/gofree', 'UserController@goFree')->name('gofree'); //Works
+    /*--------------------------------------------------------------
+        Glossaries & terms
+    --------------------------------------------------------------*/
+    Route::prefix('glossary')->group(function() {
+        Route::get('/new', 'GlossaryController@new')->name('new'); //Works
+        Route::get('/edit/{id}', 'GlossaryController@edit')->name('edit'); //Works
+        Route::get('/show/{id}', 'GlossaryController@show')->name('show'); //Works
+        Route::post('/create', 'GlossaryController@create')->name('create'); //Works
+        //Route::get('/update/{id}', 'GlossaryController@update')->name('update'); //
+        //Route::get('/delete', 'GlossaryController@delete')->name('delete');
+    });
+    Route::get('/glossaries', 'GlossaryController@showMyGlossaries')->name('glossaries'); //Works
 });

@@ -13,7 +13,7 @@
         <div class="col-12 mt-4">
             <p class="black3 mb-0">{{Auth::user()->name}}</p>
             <p class="black3">{{Auth::user()->email}}</p>
-            <p class="black3">User type: {{Auth::user()->status()}}<i class="fas fa-star warning-dark ml-1"></i></p>
+            <p class="black3">User type: {{Auth::user()->status()}}@if(Auth::user()->is_paid)<i class="fas fa-star warning ml-1"></i>@endif</p>
         </div>
     </div>
     <hr>

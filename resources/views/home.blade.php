@@ -2,31 +2,34 @@
 
 @section('content')
 
-@include('components.nav', ['nav_type' => 'navbar-light bg-white1'])
+@include('components.nav', ['nav_type' => 'navbar-dark bg-black3'])
 
-<div class="container mt-5 pt-5">
-    <div class="row">
-        <div class="col">
-            Hello
-        </div>
-    </div>
-    <hr>
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
+        <!-- Left panel menu -->
+        <div class="panel-sidebar pt-5">
+            <h2 class="h5 w500 mt-5 mb-4 pl-3 black3">Hello {{Auth::user()->name}}!</h2>
+            <ul class="list-group border-none">
+                <a href="/" class="list-group-item list-group-item-action border-none">Home</a>
+                <a href="/user/glossary/new" class="list-group-item list-group-item-action border-none">New glossary</a>
+                <a href="/user/glossaries" class="list-group-item list-group-item-action border-none">My glossaries</a>
+                <a href="/user/profile" class="list-group-item list-group-item-action border-none">Profile</a>
+            </ul>
+        </div>
+        <!-- /.Left panel menu -->
+        <!-- Panel content -->
+        <div id="panel-container" class="col p-0">
+            <header class="panel-header mt-5 pt-2">
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+                    <h1 id="panel-title" class="my-0 px-3">@yield('panel_title')</h1>
                 </div>
+            </header>
+            <div class="p-5 w-100">
+                @yield('home_content')
             </div>
         </div>
+        <!-- /.Panel content -->
     </div>
 </div>
+
 @endsection

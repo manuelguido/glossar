@@ -37,4 +37,8 @@ class Glossary extends Model
     {
         return $this->belongsTo('App\User', 'user_id', 'user_id')->get();
     }
+
+    public function isMine(){
+        return ($this->user_id = Auth::user()->user_id);
+    }
 }
