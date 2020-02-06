@@ -43,4 +43,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the glosarries for the user.
+     */
+    public function glossaries()
+    {
+        return $this->hasMany('App\Glossary');
+    }
 }
