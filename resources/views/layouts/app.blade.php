@@ -22,6 +22,7 @@
 </head>
 <body>
     <div id="app">
+        @include('components.messages')
         @yield('content')
     </div>
 

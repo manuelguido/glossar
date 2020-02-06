@@ -51,4 +51,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Glossary', 'user_id', 'user_id')->get();
     }
+
+    public function status()
+    {
+        if($this->is_paid)
+            return 'Pro user';
+        else
+            return 'Free user';
+    }
 }

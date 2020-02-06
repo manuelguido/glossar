@@ -15,3 +15,9 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+
+Route::prefix('user')->group(function() {
+    Route::get('/profile', 'UserController@showProfile')->name('profile');
+    Route::get('/gopro', 'UserController@goPro')->name('gopro');
+    Route::get('/gofree', 'UserController@goFree')->name('gofree');
+});

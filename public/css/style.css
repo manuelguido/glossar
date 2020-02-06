@@ -42,9 +42,26 @@
     --white-2: #fbfbfb;
     --white-3: #f2f2f2;
         /*Blacks*/
-    --black-1: #353535;
+    --black-1: #454545;
     --black-2: #555;
     --black-3: #696969;
+    --black-4: #838383;
+    --black-5: #aaa;
+        /*Geneal pallete*/
+    --danger: #ff4444;
+    --danger-dark: #cc0000;    
+    --info: #29cae4;
+    --info-dark: #20b8d1;
+    --light: #c9d4e3;
+    --light-dark: #b8c4d6;
+    --link: #3e64ff;
+    --link-dark: #1d41d1;
+    --primary: #5143de;
+    --primary-dark: #251f87;
+    --success: #00c851;
+    --success-dark: #007e33;
+    --warning: #ffbb33;
+    --warning-dark: #ff8800;
 }
 
 /*--------------------------------------------------------------
@@ -148,7 +165,6 @@ body {
 /*--------------------------------------------------------------
     Buttons
 --------------------------------------------------------------*/
-.btn { margin: 0px !important; }
 .btn i { color: inherit !important; }
 .btn-rounded { border-radius: 50px !important; }
 .btn-left-rounded {
@@ -159,6 +175,20 @@ body {
     border-top-right-radius: 50px !important;
     border-bottom-right-radius: 50px !important;
 }
+
+/* Buttons By color */
+.btn-primary { background-color: var(--primary) !important; }
+.btn-primary-dark { background-color: var(--primary-dark) !important; }
+.btn-info { background-color: var(--info) !important; }
+.btn-info-dark { background-color: var(--info-dark) !important; }
+.btn-light { background-color: var(--light) !important; }
+.btn-light-dark { background-color: var(--light-dark) !important; }
+.btn-success { background-color: var(--success) !important; }
+.btn-success-dark { background-color: var(--success-dark) !important; }
+.btn-warning { background-color: var(--warning) !important; }
+.btn-warning-dark { background-color: var(--warning-dark) !important; }
+.btn-danger { background-color: var(--danger) !important; }
+.btn-danger-dark { background-color: var(--danger-dark) !important; }
 
 /*--------------------------------------------------------------
     Colors
@@ -201,6 +231,32 @@ body {
 .black1 { color: var(--black-1) !important; }
 .black2 { color: var(--black-2) !important; }
 .black3 { color: var(--black-3) !important; }
+.black4 { color: var(--black-4) !important; }
+.black5 { color: var(--black-5) !important; }
+
+.info { color: var(--info) !important; }
+.info-dark { color: var(--info-dark) !important; }
+
+.light { color: var(--light) !important; }
+.light-dark { color: var(--light-dark) !important; }
+
+.link { color: var(--link) !important; }
+.link-dark { color: var(--link-dark) !important; }
+
+.primary { color: var(--primary) !important; }
+.primary-dark { color: var(--primary-dark) !important; }
+
+.secondary { color: var(--secondary) !important; }
+.secondary-dark { color: var(--secondary-dark) !important; }
+
+.success { color: var(--success) !important; }
+.success-dark { color: var(--success-dark) !important; }
+
+.warning { color: var(--warning) !important; }
+.warning-dark { color: var(--warning-dark) !important; }
+
+.danger { color: var(--danger) !important; }
+.danger-dark { color: var(--danger-dark) !important; }
 
 /*--------------------------------------------------------------
     Background Colors
@@ -243,6 +299,24 @@ body {
 .bg-black2 { background: var(--black-2) !important; }
 .bg-black3 { background: var(--black-3) !important; }
 
+.bg-primary { background: var(--primary) !important; }
+.bg-primary-dark { background: var(--primary-dark) !important; }
+
+.bg-info { background: var(--info) !important; }
+.bg-info-dark { background: var(--info-dark) !important; }
+
+.bg-light { background: var(--light) !important; }
+.bg-light-dark { background: var(--light-dark) !important; }
+
+.bg-success { background: var(--success) !important; }
+.bg-success-dark { background: var(--success-dark) !important; }
+
+.bg-warning { background: var(--warning) !important; }
+.bg-warning-dark { background: var(--warning-dark) !important; }
+
+.bg-danger { background: var(--danger) !important; }
+.bg-danger-dark { background: var(--danger-dark) !important; }
+
 /*--------------------------------------------------------------
     Cards
 --------------------------------------------------------------*/
@@ -251,6 +325,20 @@ body {
     overflow: hidden !important;
     box-shadow: 0 1px .125em 0 rgba(0,0,0,.15);
 }
+
+.card-header {
+    border: 0 none;
+    background-color: #f3f3f3;
+    color: var(--black-2);
+    font-weight: 400;
+}
+
+.card-primary-bottom { border-bottom: 4px solid var(--primary) !important; }
+.card-secondary-bottom { border-bottom: 4px solid var(--secondary) !important; }
+.card-success-bottom { border-bottom: 4px solid var(--success) !important; }
+.card-warning-bottom { border-bottom: 4px solid var(--warning) !important; }
+.card-danger-bottom { border-bottom: 4px solid var(--danger) !important; }
+.card-info-bottom { border-bottom: 4px solid var(--info) !important; }
 
 /*--------------------------------------------------------------
     Forms
@@ -261,6 +349,16 @@ body {
 .form-rounded {
     border-radius: 50px;
     padding: 0 0 0 20px;
+}
+
+/*--------------------------------------------------------------
+    Notification and messages
+--------------------------------------------------------------*/
+.alert-fixed {
+    position: fixed !important;
+    top: 4vh !important;
+    right: 1vw !important;
+    z-index: 10000;
 }
 
 /*--------------------------------------------------------------

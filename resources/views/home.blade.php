@@ -1,7 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+@include('components.nav', ['nav_type' => 'navbar-light bg-white1'])
+
+<div class="container mt-5 pt-5">
+    <div class="row">
+        <div class="col">
+            Hello
+        </div>
+    </div>
+    <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
