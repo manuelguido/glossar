@@ -1,0 +1,305 @@
+/*--------------------------------------------------------------
+    Import fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700,800&display=swap');
+/*--------------------------------------------------------------
+    Root variables
+--------------------------------------------------------------*/
+:root {
+    /*Color Pallette*/
+        /*Color1*/
+    --color-1a:#517fa4;
+    --color-1b:rgba(81, 115, 129, 0.8);
+    --color-1c:rgba(81, 115, 129, 0.6);
+    --color-1d:rgba(81, 115, 129, 0.4);
+    --color-1e:rgba(81, 115, 129, 0.2);
+        /*Color2*/
+    --color-2a: rgb(223, 177, 155);
+    --color-2b: rgba(223, 177, 155, 0.8);
+    --color-2c: rgba(223, 177, 155, 0.6);
+    --color-2d: rgba(223, 177, 155, 0.4);
+    --color-2e: rgba(223, 177, 155, 0.2);
+        /*Color3*/
+    --color-3a: rgb(255, 228, 187);
+    --color-3b: rgba(255, 228, 187, 0.8);
+    --color-3c: rgba(255, 228, 187, 0.6);
+    --color-3d: rgba(255, 228, 187, 0.4);
+    --color-3e: rgba(255, 228, 187, 0.2);
+        /*Color4*/
+    --color-4a: rgb(252, 250, 241);
+    --color-4b: rgba(252, 250, 241, 0.8);
+    --color-4c: rgba(252, 250, 241, 0.6);
+    --color-4d: rgba(252, 250, 241, 0.4);
+    --color-4e: rgba(252, 250, 241, 0.2);
+        /*Color5*/
+    --color-5a: rgb(61, 82, 101);
+    --color-5b: rgba(61, 82, 101, 0.8);
+    --color-5c: rgba(61, 82, 101, 0.6);
+    --color-5d: rgba(61, 82, 101, 0.4);
+    --color-5e: rgba(61, 82, 101, 0.2);
+        /*Whites*/
+    --white-1: #fff;
+    --white-2: #fbfbfb;
+    --white-3: #f2f2f2;
+        /*Blacks*/
+    --black-1: #353535;
+    --black-2: #555;
+    --black-3: #696969;
+}
+
+/*--------------------------------------------------------------
+    General
+--------------------------------------------------------------*/
+* {
+    color: var(--black-1);
+    font-family: 'Nunito', sans-serif;
+    transition: 0.1s all;
+}
+html {
+    scroll-behavior: smooth !important;
+}
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+.display-none { display: none !important;}
+.display-block { display: block !important;}
+.overflow-hidden { overflow: hidden !important; }
+.border-none { border: 0 none !important; }
+.bg-none { background: none !important; }
+.shadow-none { box-shadow: none !important; }
+.cursor-p { cursor: pointer !important; }
+.cursor-d { cursor: default !important; }
+.cursor-na { cursor: not-allowed !important; }
+.uns {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+.op-hover1:hover {opacity: 0.7 !important;}
+.op-hover2:hover {opacity: 0.5 !important;}
+.op-hover3:hover {opacity: 0.4 !important;}
+.opacity1 {opacity: 0.1 !important;}
+.opacity2 {opacity: 0.2 !important;}
+.opacity3 {opacity: 0.3 !important;}
+.opacity4 {opacity: 0.4 !important;}
+.opacity5 {opacity: 0.5 !important;}
+.opacity6 {opacity: 0.6 !important;}
+.opacity7 {opacity: 0.7 !important;}
+.opacity8 {opacity: 0.8 !important;}
+.opacity9 {opacity: 0.9 !important;}
+.opacity10 {opacity: 1 !important;}
+
+/*--------------------------------------------------------------
+    Scrollbar
+--------------------------------------------------------------*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #333;
+    border: 2px solid #555555;
+}
+
+/*--------------------------------------------------------------
+    Images
+--------------------------------------------------------------*/
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*--------------------------------------------------------------
+    Text
+--------------------------------------------------------------*/
+.w200 { font-weight: 200 !important; }
+.w300 { font-weight: 300 !important; }
+.w400 { font-weight: 400 !important; }
+.w500 { font-weight: 500 !important; }
+.w600 { font-weight: 600 !important; }
+.w700 { font-weight: 700 !important; }
+.w800 { font-weight: 800 !important; }
+.w900 { font-weight: 900 !important; }
+
+.italic { font-style: italic !important; }
+
+.ls01{ letter-spacing: .01em; }
+.ls02{ letter-spacing: .02em; }
+.ls03{ letter-spacing: .03em; }
+.ls04{ letter-spacing: .04em; }
+.ls05{ letter-spacing: .05em; }
+.ls06{ letter-spacing: .06em; }
+.ls07{ letter-spacing: .07em; }
+.ls08{ letter-spacing: .08em; }
+.ls09{ letter-spacing: .09em; }
+
+/*--------------------------------------------------------------
+    Buttons
+--------------------------------------------------------------*/
+.btn { margin: 0px !important; }
+.btn i { color: inherit !important; }
+.btn-rounded { border-radius: 50px !important; }
+.btn-left-rounded {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+}
+.btn-right-rounded { 
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+}
+
+/*--------------------------------------------------------------
+    Colors
+--------------------------------------------------------------*/
+    /*Color1*/
+.color1a { color: var(--color-1a) !important;}
+.color1b { color: var(--color-1b) !important;}
+.color1c { color: var(--color-1c) !important;}
+.color1d { color: var(--color-1d) !important;}
+.color1e { color: var(--color-1e) !important;}
+    /*Color2*/
+.color2a { color: var(--color-2a) !important;}
+.color2b { color: var(--color-2b) !important;}
+.color2c { color: var(--color-2c) !important;}
+.color2d { color: var(--color-2d) !important;}
+.color2e { color: var(--color-2e) !important;}
+    /*Color3*/
+.color3a { color: var(--color-3a) !important;}
+.color3b { color: var(--color-3b) !important;}
+.color3c { color: var(--color-3c) !important;}
+.color3d { color: var(--color-3d) !important;}
+.color3e { color: var(--color-3e) !important;}
+    /*Color4*/
+.color4a { color: var(--color-4) !important;}
+.color4b { color: var(--color-4) !important;}
+.color4c { color: var(--color-4) !important;}
+.color4d { color: var(--color-4) !important;}
+.color4e { color: var(--color-4) !important;}
+    /*Color5*/
+.color5a { color: var(--color-5a) !important;}
+.color5b { color: var(--color-5b) !important;}
+.color5c { color: var(--color-5c) !important;}
+.color5d { color: var(--color-5d) !important;}
+.color5e { color: var(--color-5e) !important;}
+    /*White*/
+.white1 { color: var(--white-1) !important; }
+.white2 { color: var(--white-2) !important; }
+.white3 { color: var(--white-3) !important; }
+    /*Black*/
+.black1 { color: var(--black-1) !important; }
+.black2 { color: var(--black-2) !important; }
+.black3 { color: var(--black-3) !important; }
+
+/*--------------------------------------------------------------
+    Background Colors
+--------------------------------------------------------------*/
+.bg-color1a { background: var(--color-1a) !important;}
+.bg-color1b { background: var(--color-1b) !important;}
+.bg-color1c { background: var(--color-1c) !important;}
+.bg-color1d { background: var(--color-1d) !important;}
+.bg-color1e { background: var(--color-1e) !important;}
+
+.bg-color2a { background: var(--color-2a) !important;}
+.bg-color2b { background: var(--color-2b) !important;}
+.bg-color2c { background: var(--color-2c) !important;}
+.bg-color2d { background: var(--color-2d) !important;}
+.bg-color2e { background: var(--color-2e) !important;}
+
+.bg-color3a { background: var(--color-3a) !important;}
+.bg-color3b { background: var(--color-3b) !important;}
+.bg-color3c { background: var(--color-3c) !important;}
+.bg-color3d { background: var(--color-3d) !important;}
+.bg-color3e { background: var(--color-3e) !important;}
+
+.bg-color4a { background: var(--color-4a) !important;}
+.bg-color4b { background: var(--color-4b) !important;}
+.bg-color4c { background: var(--color-4c) !important;}
+.bg-color4d { background: var(--color-4d) !important;}
+.bg-color4e { background: var(--color-4e) !important;}
+
+.bg-color5a { background: var(--color-5a) !important;}
+.bg-color5b { background: var(--color-5b) !important;}
+.bg-color5c { background: var(--color-5c) !important;}
+.bg-color5d { background: var(--color-5d) !important;}
+.bg-color5e { background: var(--color-5e) !important;}
+
+.bg-white1 { background: var(--white-1) !important; }
+.bg-white2 { background: var(--white-2) !important; }
+.bg-white3 { background: var(--white-3) !important; }
+
+.bg-black1 { background: var(--black-1) !important; }
+.bg-black2 { background: var(--black-2) !important; }
+.bg-black3 { background: var(--black-3) !important; }
+
+/*--------------------------------------------------------------
+    Cards
+--------------------------------------------------------------*/
+.card {
+    border: 0 none;
+    overflow: hidden !important;
+    box-shadow: 0 1px .125em 0 rgba(0,0,0,.15);
+}
+
+/*--------------------------------------------------------------
+    Forms
+--------------------------------------------------------------*/
+.form-control::placeholder{
+    color: #bbb;
+}
+.form-rounded {
+    border-radius: 50px;
+    padding: 0 0 0 20px;
+}
+
+/*--------------------------------------------------------------
+    PAGES
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    Welcome Page
+--------------------------------------------------------------*/
+.welcome-wallpaper {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../img/welcome.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.container-full {
+    min-height: 100vh;
+}
+
+/*--------------------------------------------------------------
+    Login & Register page
+--------------------------------------------------------------*/
+.auth-wallpaper {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../img/auth.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.bg-gradient1 {
+    background: rgb(36,57,73);
+    background: -moz-linear-gradient(180deg, rgba(36,57,73,0.7) 0%, rgba(155,197,195,0.7) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(36,57,73,0.7) 0%, rgba(155,197,195,0.7) 100%);
+    background: linear-gradient(180deg, rgba(36,57,73,0.7) 0%, rgba(155,197,195,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#243949",endColorstr="#9bc5c3",GradientType=1);
+}
+.text-shadow1 {
+    text-shadow: 1px 1px 14px rgba(0, 0, 0, 0.4);
+}
