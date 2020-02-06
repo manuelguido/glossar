@@ -27,6 +27,6 @@ class Term extends Model
      */
     public function glossary()
     {
-        return $this->belongsTo('App\Glossary');
+        return $this->belongsTo('App\Glossary', 'glossary_id', 'glossary_id')->get();
     }
 }

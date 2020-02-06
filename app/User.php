@@ -49,6 +49,6 @@ class User extends Authenticatable
      */
     public function glossaries()
     {
-        return $this->hasMany('App\Glossary');
+        return $this->hasMany('App\Glossary', 'user_id', 'user_id')->get();
     }
 }

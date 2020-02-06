@@ -27,7 +27,7 @@ class Glossary extends Model
      */
     public function terms()
     {
-        return $this->hasMany('App\Term');
+        return $this->hasMany('App\Term', 'glossary_id', 'glossary_id')->get();
     }
 
     /**
@@ -35,6 +35,6 @@ class Glossary extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'user_id', 'user_id')->get();
     }
 }
