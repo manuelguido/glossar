@@ -11,9 +11,17 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-
+            <ul class="navbar-nav mx-auto nav-search">
+                <form method="GET" action="/search">
+                    @csrf
+                    <div class="input-group pl-0">
+                        <input class="form-control border-none btn-left-rounded pl-3" type="text" name="search_data" placeholder="Search for a glossary">
+                        <div class="input-group-append bl-0">
+                            <span class="input-group-text btn-right-rounded border-none bg-white1" id="basic-text1"><i class="fas fa-search text-grey"
+                                aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </form>
             </ul>
 
             <!-- Right Side Of Navbar -->

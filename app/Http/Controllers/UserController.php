@@ -18,7 +18,7 @@ class UserController extends Controller
         Show user profile
     --------------------------------------------------------------*/
     public function showProfile(){
-        return view('profile');
+        return view('home_views/profile');
     }
 
     /*--------------------------------------------------------------

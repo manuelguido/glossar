@@ -1,12 +1,19 @@
 @extends('home')
 
-@section('panel_title', 'New glossary')
+@section('panel_title')
+<nav aria-label="breadcrumb p-0 m-0">
+    <ol class="breadcrumb p-0 m-0 bg-none">
+      <li class="breadcrumb-item w400"><a href="/">Home</a></li>
+      <li class="breadcrumb-item w400 active">New Glossary</li>
+    </ol>
+</nav>
+@endsection
 
 @section('home_content')
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-lg-10">
             <div class="card mb-5">
                 <div class="card-header">
                     Create a new glossary
@@ -19,8 +26,8 @@
                         <p class="h6 black3 my-01">A glossary must have a subject</p>
                         <hr>
                         <!-- Term 1 -->
-                        <div class="form-group row">
-                            <div class="col-12 col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 col-lg-7">
                                 <label>Subject</label>
                                 <input id="subject" type="text" class="form-control @error('subject') is-invalid @enderror" placeholder="Write a subject" name="subject" value="{{ old('subject') }}" required autocomplete="subject" autofocus>
 
@@ -32,8 +39,8 @@
                             </div>
                         </div>
                         <!-- Term 1 -->
-                        <div class="form-group row">
-                            <div class="col-12 col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 col-lg-7">
                                 <label>Term 1</label>
                                 <input id="term1" type="text" class="form-control @error('term1') is-invalid @enderror" placeholder="Term number 1" name="term1" value="{{ old('term1') }}" required autocomplete="term1" autofocus>
 
@@ -45,8 +52,8 @@
                             </div>
                         </div>
                         <!-- Term 2 -->
-                        <div class="form-group row">
-                            <div class="col-12 col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 col-lg-7">
                                 <label>Term 2</label>
                                 <input id="term2" type="text" class="form-control @error('term2') is-invalid @enderror" placeholder="Term number 2" name="term2" value="{{ old('term2') }}" required autocomplete="term2" autofocus>
 
@@ -58,8 +65,8 @@
                             </div>
                         </div>
                         <!-- Term 3 -->
-                        <div class="form-group row">
-                            <div class="col-12 col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 col-lg-7">
                                 <label>Term 3</label>
                                 <input id="term3" type="text" class="form-control @error('term3') is-invalid @enderror" placeholder="Term number 3" name="term3" value="{{ old('term3') }}" required autocomplete="term3" autofocus>
 
@@ -71,8 +78,8 @@
                             </div>
                         </div>
                         <!-- Term 4 -->
-                        <div class="form-group row">
-                            <div class="col-12 col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 col-lg-7">
                                 <label>Term 4</label>
                                 <input id="term4" type="text" class="form-control @error('term4') is-invalid @enderror" placeholder="Term number 4" name="term4" value="{{ old('term4') }}" autocomplete="term4" autofocus>
 
@@ -84,8 +91,8 @@
                             </div>
                         </div>
                         <!-- Term 1 -->
-                        <div class="form-group row">
-                            <div class="col-12 col-lg-6">
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 col-lg-7">
                                 <label>Term 5</label>
                                 <input id="term5" type="text" class="form-control @error('term5') is-invalid @enderror" placeholder="Term number 5" name="term5" value="{{ old('term5') }}" autocomplete="term5" autofocus>
 
@@ -96,8 +103,8 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row mb-0 mt-5">
-                            <div class="col-12">
+                        <div class="form-group row justify-content-center mb-3 mt-5">
+                            <div class="col-12 col-lg-7">
                                 <button type="submit" class="btn btn-primary btn-block btn-rounded waves-effect">
                                     Create glossary
                                 </button>

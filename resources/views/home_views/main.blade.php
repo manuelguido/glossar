@@ -4,15 +4,15 @@
 
 @section('home_content')
 
-<div class="row">
-    <div class="col-12 col-lg-3 mb-3">
+<div class="row justify-content-center">
+    <div class="col-12 col-lg-4 mb-3">
         @include('components.cardlink', [
             'url' => 'user/glossary/new',
             'icon' => 'fas fa-plus',
             'label' => 'Create a new glossary'
         ])
     </div>
-    <div class="col-12 col-lg-3 mb-3">
+    <div class="col-12 col-lg-4 mb-3">
         @include('components.cardlink', [
             'url' => 'user/glossaries',
             'icon' => 'fas fa-th-list',

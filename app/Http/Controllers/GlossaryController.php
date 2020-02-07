@@ -35,7 +35,7 @@ class GlossaryController extends Controller
         Show new glossary
     --------------------------------------------------------------*/
     public function new(){
-        return view('glossary_new');
+        return view('home_views/glossary_new');
     }
 
     /*--------------------------------------------------------------
@@ -43,7 +43,7 @@ class GlossaryController extends Controller
     --------------------------------------------------------------*/
     public function show($id){
         $glossary = Glossary::where('glossary_id', $id)->first();
-        return view('glossary', [
+        return view('home_views/glossary', [
             'glossary' => Glossary::where('glossary_id', $id)->first(),
             'terms' => $glossary->terms(),
         ]);
@@ -54,7 +54,7 @@ class GlossaryController extends Controller
     --------------------------------------------------------------*/
     public function edit($id){
         $glossary = Glossary::where('glossary_id', $id)->first();
-        return view('glossary_edit', [
+        return view('home_views/glossary_edit', [
             'glossary' => Glossary::where('glossary_id', $id)->first(),
             'terms' => $glossary->terms(),
         ]);
@@ -64,7 +64,7 @@ class GlossaryController extends Controller
         Show my glossaries
     --------------------------------------------------------------*/
     public function showMyGlossaries(){
-        return view('glossaries', [
+        return view('home_views/glossaries', [
             'glossaries' => Glossary::where('user_id', Auth::user()->user_id)->get()
         ]);
     }

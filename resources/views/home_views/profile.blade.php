@@ -1,28 +1,35 @@
-@extends('layouts.app')
+@extends('home')
 
-@section('content')
+@section('panel_title')
+<nav aria-label="breadcrumb p-0 m-0">
+    <ol class="breadcrumb p-0 m-0 bg-none">
+      <li class="breadcrumb-item w400"><a href="/">Home</a></li>
+      <li class="breadcrumb-item w400 active">Profile</li>
+    </ol>
+</nav>
+@endsection
 
-@include('components.nav', ['nav_type' => 'navbar-light bg-white1'])
+@section('home_content')
 
-<div class="container mt-5 pt-5">
+<div class="container">
     <div class="row">
-        <div class="col-12">
-            <p class="h5">Hello!</p>
-            <p class="h6">Here is your user data</p>
+        <div class="col-10">
+            <p class="h4">Hello!</p>
+            <p class="h5">Here is your user data</p>
         </div>
-        <div class="col-12 mt-4">
-            <p class="black3 mb-0">{{Auth::user()->name}}</p>
-            <p class="black3">{{Auth::user()->email}}</p>
-            <p class="black3">User type: {{Auth::user()->status()}}@if(Auth::user()->is_paid)<i class="fas fa-star warning ml-1"></i>@endif</p>
+        <div class="col-10 mt-4">
+            <p class="h6 mb-0">{{Auth::user()->name}}</p>
+            <p class="h6">{{Auth::user()->email}}</p>
+            <p class="h6">User type: <span class="primary-dark">{{Auth::user()->status()}}</span>@if(Auth::user()->is_paid)<i class="fas fa-star warning ml-1"></i>@endif</p>
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-12">
+        <div class="col-10">
             @if(Auth::user()->is_paid)
             
                 <span class="mr-4 h5 black3">Do you want downgrade your account?</span>
-                <button type="button" class="btn btn-primary btn-sm btn-rounded" data-toggle="modal" data-target="#modal">
+                <button type="button" class="btn btn-primary btn-sm btn-rounded w800 ls05" data-toggle="modal" data-target="#modal">
                     Become a free user
                 </button>
                 @include('components.modal', [
@@ -34,7 +41,7 @@
 
                 <span class="mr-4 h5 black3">Do you want to go pro?</span>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-sm btn-rounded" data-toggle="modal" data-target="#modal">
+                <button type="button" class="btn btn-primary btn-sm btn-rounded w800 ls05" data-toggle="modal" data-target="#modal">
                     Get pro today!
                 </button>
                 @include('components.modal', [
