@@ -375,9 +375,7 @@ nav, nav * {
     width: auto;
 }
 
-.nav-search .input-group {
-    min-width: 400px !important;
-}
+
 /*--------------------------------------------------------------
     Notification and messages
 --------------------------------------------------------------*/

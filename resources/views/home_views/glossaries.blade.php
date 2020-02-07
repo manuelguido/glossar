@@ -14,10 +14,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
+            @if(count($glossaries) > 0)
             <div class="card mb-5">
                 <div class="card-header">
                     List of your glossaries
-                </div>
+                </div> 
                 <div class="card-body">
                     <ul class="list-group">
                     @foreach ($glossaries as $glossary)
@@ -28,6 +29,9 @@
                     </ul>
                 </div>
             </div>
+            @else
+                <h1 class="h4 black3">Currently you have no glossaries. <a href="/user/glossary/new">Create one</a> now.</h1>
+            @endif
         </div>
     </div>
 </div>
