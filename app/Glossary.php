@@ -35,7 +35,7 @@ class Glossary extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\User', 'user_id', 'user_id')->get();
+        return $this->belongsTo('App\User', 'user_id', 'user_id')->first();
     }
 
     public function isMine(){

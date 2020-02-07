@@ -22,9 +22,9 @@
                         <div class="form-group row">
                             <div class="col-12 col-lg-6">
                                 <label>Subject</label>
-                                <input id="subject" type="text" class="form-control @error('subject') is-invalid @enderror" placeholder="Write a subject" name="subject" value="{{ $glossary->name }}" required autocomplete="subject" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Write a subject" name="name" value="{{ $glossary->name }}" required autocomplete="name" autofocus>
 
-                                @error('subject')
+                                @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

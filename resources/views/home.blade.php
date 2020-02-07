@@ -24,7 +24,7 @@
                     <h1 id="panel-title" class="my-0 px-3">@yield('panel_title')</h1>
                 </div>
             </header>
-            <div class="p-5 w-100">
+            <div class="py-5 px-lg-5 px-2 w-100">
                 @yield('home_content')
             </div>
         </div>

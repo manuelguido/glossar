@@ -17,7 +17,14 @@
         <div class="list-group">
             @foreach ($glossaries as $glossary)
             <a href="/user/glossary/show/{{$glossary->glossary_id}}" class="py-3 list-group-item list-group-item-action">
-                <span class="black2"><p class="h5 m-0">{{$glossary->name}}:</p><p class="h5 m-0"></p></span>
+                <p class="primary-dark h5 my-1"><span class="black2">Subject:</span> {{$glossary->name}}<p class="black4 h6">by {{$glossary->user()->name}}</p></p>
+                <p class="black5 h6 m-0">
+                    <span class="h6">Terms:</span>
+                    @php $terms = $glossary->terms() @endphp
+                    @foreach($terms as $term)
+                    {{$term->name}},
+                    @endforeach
+                </p>
             </a>
             @endforeach
         </div>

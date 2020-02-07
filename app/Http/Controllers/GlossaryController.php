@@ -21,7 +21,7 @@ class GlossaryController extends Controller
     private function validateGlossary() {
 
         return request()->validate([
-            'subject' => 'required|string|max:100',
+            'name' => 'required|string|max:100',
             'term1' => 'required|string|max:100',
             'term2' => 'required|string|max:100',
             'term3' => 'required|string|max:100',
@@ -77,7 +77,7 @@ class GlossaryController extends Controller
 
         //Creates the glossary
         $glossary = new Glossary;
-        $glossary->name = $data->subject;
+        $glossary->name = $data->name;
         $glossary->user_id = Auth::user()->user_id;
         $glossary->save();
         
@@ -104,7 +104,7 @@ class GlossaryController extends Controller
             ['glossary_id', $id],
             ['user_id', Auth::user()->user_id],
             ])->first();
-        $glossary->name = $data->subject;
+        $glossary->name = $data->name;
         $glossary->user_id = Auth::user()->user_id;
         $glossary->save();
         

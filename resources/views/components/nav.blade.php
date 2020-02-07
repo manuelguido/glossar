@@ -37,12 +37,56 @@
                         </li>
                     @endif
                 @else
-                    <li class="nav-item dropdown">
+                    <li class="nav-item web-hide">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-home black5 mr-2"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item web-hide">
+                        <a class="nav-link" href="/user/glossary/new">
+                            <i class="fas fa-plus black5 mr-2"></i>
+                            New glossary
+                        </a>
+                    </li>
+                    <li class="nav-item web-hide">
+                        <a class="nav-link" href="/user/glossaries">
+                            <i class="fas fa-th-list black5 mr-2"></i>
+                            My glossaries
+                        </a>
+                    </li>
+                    <li class="nav-item web-hide">
+                        <a class="nav-link" href="{{ route('profile') }}">
+                            <i class="fas fa-user black5 mr-2"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item web-hide">
+                        <a class="nav-link" href="{{ route('logout') }}" 
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            <i class="fas fa-sign-out-alt black5 mr-2"></i>
+                            Logout
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown mobile-hide">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu pt-2 pb-0 dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item black3 w500" href="{{ route('home') }}">
+                                <i class="fas fa-home black5 mr-3"></i>
+                                Inicio
+                            </a>
+                            <a class="dropdown-item black3 w500" href="/user/glossary/new">
+                                <i class="fas fa-plus black5 mr-3"></i>
+                                New glossary
+                            </a>
+                            <a class="dropdown-item black3 w500" href="/user/glossaries">
+                                <i class="fas fa-th-list black5 mr-3"></i>
+                                My glossaries
+                            </a>
                             <a class="dropdown-item black3 w500" href="{{ route('profile') }}">
                                 <i class="fas fa-user black5 mr-3"></i>
                                 Profile

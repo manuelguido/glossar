@@ -79,6 +79,9 @@ body {
     background: #ededed;
     overflow-x: hidden;
 }
+nav, nav * {
+    transition: .22s all !important;
+}
 .display-none { display: none !important;}
 .display-block { display: block !important;}
 .overflow-hidden { overflow: hidden !important; }
@@ -136,6 +139,21 @@ body {
 .image-container {
     display: flex;
     justify-content: center;
+}
+
+
+/*--------------------------------------------------------------
+    Generic
+--------------------------------------------------------------*/
+@media(max-width: 992px){
+    .mobile-hide {
+        display: none;
+    }
+}
+@media(min-width: 992px){
+    .web-hide {
+        display: none;
+    }
 }
 
 /*--------------------------------------------------------------

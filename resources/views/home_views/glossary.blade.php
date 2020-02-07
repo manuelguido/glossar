@@ -16,15 +16,14 @@
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
             <div class="card mb-5">
-                <div class="card-header">
-                    Subject: <span class="primary">{{$glossary->name}}</span>
-                </div>
                 <div class="card-body">
-                    <h2 class="h5 mb-3">Glossary terms:</h2>
-                    <p class="h6 text-capitalize">
-                    @foreach ($terms as $term)
+                    <p class="primary-dark h5 my-1"><span class="black2">Subject:</span> {{$glossary->name}}<p class="black4 h6">by {{$glossary->user()->name}}</p></p>
+                    <p class="black5 h6 m-0">
+                        <span class="h6">Terms:</span>
+                        @php $terms = $glossary->terms() @endphp
+                        @foreach($terms as $term)
                         {{$term->name}},
-                    @endforeach
+                        @endforeach
                     </p>
                 </div>
             </div>
